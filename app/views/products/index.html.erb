@@ -1,2 +1,13 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<h1>Products (<%= @products.length %>)</h1>
+
+<%= link_to "New Product", new_product_path %>
+<% @products.each do |product| %>
+
+<p><%= link_to product.name, "/products/#{product.id}" %> 
+<br>
+<%= product.description %>
+<br>
+$<%= product.formatted_price %>
+</p>
+
+<% end %>
