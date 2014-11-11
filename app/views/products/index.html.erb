@@ -1,11 +1,11 @@
 <h1>Products (<%= @products.length %>)</h1>
 
-<%= link_to "New Product", new_product_path %>
-<% @products.each do |product| %>
+<p><%= link_to "New Product", new_product_path %>
+<% @products.each do |product| %></P>
 
-<p><%= link_to product.name, "/products/#{product.id}" %> 
+<p><%= link_to product.name, "/products/#{product.id}" %></p>
 <br>
-<%= product.description %>
+<p><%= product.description %></p>
 <br>
 $<%= product.formatted_price %>
 </p>

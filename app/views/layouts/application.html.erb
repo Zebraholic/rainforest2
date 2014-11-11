@@ -4,6 +4,8 @@
   <title>Rainforest</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -15,6 +17,8 @@
     <% end %>
 
   <%= yield %>
+  link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+      <% end %>
     </p>
 </body>
 </html>

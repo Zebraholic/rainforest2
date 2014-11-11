@@ -1,3 +1,85 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+ * {
+	margin-top: 0px;
+	padding: 0;
+}
+
+header {
+	margin-top: 0px;
+	padding: 0;
+	}
+
+body {
+	margin-top: 5px;
+    text-align: center;
+	font-family: 'Lobster', serif;
+	font-size: 16px;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+
+    
+}
+
+/* unvisited link */
+a:link {
+	font-family: 'Merriweather Sans', serif;
+		color: #000000;
+
+
+}
+
+/* visited link */
+a:visited {
+	font-family: 'Merriweather Sans', serif;
+	color: #000000;
+
+}
+
+/* mouse over link */
+a:hover {
+	font-family: 'Merriweather Sans', serif;
+	color: #000000;
+
+}
+
+/* selected link */
+a:active {
+	font-family: 'Merriweather Sans', serif;
+		color: #000000;
+
+
+}
+
+div.img {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #0000ff;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}	
+
+p {
+    display: inline;
+    margin: 5px;
+    border: 1px solid #ffffff;
+}
+
+div.img a:hover img {
+    border: 1px solid #0000ff;
+}
+
+div.desc {
+  text-align: center;
+  font-weight: normal;
+  width: 120px;
+  margin: 5px;
+}
