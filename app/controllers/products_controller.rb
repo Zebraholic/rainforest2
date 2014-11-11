@@ -1,4 +1,16 @@
 class ProductsController < ApplicationController
+
+  before_action :require_login, only: [:new, :edit, :create]
+
+private
+  def require_login
+    unless current_user
+      redirect_to new_session_url
+    end
+  end
+
+public
+
   def index
     @products = Product.all
   end
