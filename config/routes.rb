@@ -1,5 +1,7 @@
 Rainforest::Application.routes.draw do
 
+  root 'products/#index'
+
   get 'reviews/show'
 
   get 'reviews/create'
