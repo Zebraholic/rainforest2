@@ -13,9 +13,10 @@ public
 
   def index
     @products = if params[:search]
-      Product.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%")
+      Product.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%").order(created_at :desc).page(params)
+      
     else
-      Product.all
+    @products = Product.order('products.created_at DESC').page(params[:page])
     end
 
     respond_to do |format|
