@@ -12,16 +12,11 @@ private
 public
 
   def index
-    @products = if params[:search]
-      Product.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%").order(created_at :desc).page(params)
-      
-    else
     @products = Product.order('products.created_at DESC').page(params[:page])
-    end
 
     respond_to do |format|
+      format.js # allows the controller to respond to Javascript
       format.html
-      format.js
     end
   end
 

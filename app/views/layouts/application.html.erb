@@ -4,12 +4,12 @@
     <title>Rainforest</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Allerta">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone Kaffeesatz">
 
     <%= csrf_meta_tags %>
   </head>
     <body>
-      <header><h1>Spiier</h1></header>
+      <header><h1>BootSauce</h1></header>
         <div>
         <% if flash[:notice] %>
           <p id="notice"><%= flash[:notice] %></p>
@@ -27,8 +27,7 @@
             <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
           <% end %>
         </div>
-        </p>
-         <footer>&copy 2014 Spiier Inc.</footer> 
+        </p> 
       </body>
 </html>
 
