@@ -8,25 +8,12 @@
 <%= link_to "Add a product", new_product_path %>
 
 <!-- renders a helpful message with numbers of displayed vs. total entries -->
-<h2>Products <small><%= page_entries_info @products %></small></h2>
+<h2><%= page_entries_info @products %></h2>
 
-<hr/>
-
-<ul>
-  <% @products.each do |product| %>
-  <%= link_to product_path(product.id) do %>
-    <h2>
-      <%= product.formatted_price %>
-      <%= product.name %>
-    </h2>
-  <% end %>
-   <!-- keeps the description to 100 characters or less -->
-  <p><%= truncate(product.description, length: 100) %></p>
-<% end %>
-</ul>
+<!-- cut out our loop and refactor into the partial "app/views/products/_product.html.erb" -->
+<div id="products">
+  <%= render @products %>
+</div>
 
 <!-- outputs several pagination links such as « First ‹ Prev ... 2 3 4 5 6 7 8 9 10 ... Next › Last » -->
 <%= paginate @products %>
-
-
-
