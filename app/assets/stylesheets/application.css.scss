@@ -1,3 +1,38 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+ * {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	display:inline;
+	position:fixed; top:0px;	
+	padding-top: 20px;
+	background-color: #CCFFFF;
+	width: 100%;
+	height : 100px;
+	color: #909090;
+	font-size: 40px;
+	font-family: Ubuntu, Arial, sans-serif;
+	
+	}
+
+second {
+	display:inline;
+	font-family: Raleway, sans-serif;
+	font-size: 36px;
+	color: #FF6600;
+}	
+
+body {
+	margin-top:100px;
+	color: #909090;
+
+}
+
+container {
+	color: #FF6600;
+}
